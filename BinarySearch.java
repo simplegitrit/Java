@@ -1,46 +1,46 @@
 public class BinarySearch {
 
-    // static boolean binarysearch(int[] a , int target){
-    //     int n = a.length;
-    //     int st = 0;
-    //     int end = n-1;
+    static boolean binarysearch(int[] a , int target){
+        int n = a.length;
+        int st = 0;
+        int end = n-1;
 
-    //     while(st <= end){
-    //         int mid = (st + end)/2;
+        while(st <= end){
+            int mid = (st + end)/2;
 
-    //         if(target == a[mid]){
+            if(target == a[mid]){
 
-    //             return true;
+                return true;
 
-    //         }else if(target < a[mid]){
-    //             end = mid-1;
-    //         }else{
-    //             st = mid+1;
-    //         }
-    //     }
-    //     return false;
+            }else if(target < a[mid]){
+                end = mid-1;
+            }else{
+                st = mid+1;
+            }
+        }
+        return false;
 
-    // }
+    }
 
     // USING RECURSSION
 
-    // static boolean recbinarysearch(int[] a , int st , int end , int target){
+    static boolean recbinarysearch(int[] a , int st , int end , int target){
 
-    //     if(st > end) return false;
+        if(st > end) return false;
 
-    //     while(st <= end){
-    //         int mid = (st + end)/2;
-    //         if(target == a[mid]){
-    //             return true;
-    //         }else if(target < a[mid]){
-    //             return recbinarysearch(a, st, mid-1 , target);
-    //         }else{
-    //             return recbinarysearch(a, mid+1 , end, target);
-    //         }
-    //     }
-    //     return false;
+        while(st <= end){
+            int mid = (st + end)/2;
+            if(target == a[mid]){
+                return true;
+            }else if(target < a[mid]){
+                return recbinarysearch(a, st, mid-1 , target);
+            }else{
+                return recbinarysearch(a, mid+1 , end, target);
+            }
+        }
+        return false;
 
-    // }
+    }
 
     // SQUAREROOT
 

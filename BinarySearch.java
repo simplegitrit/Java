@@ -67,12 +67,12 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        // int[] a = {1, 2, 3, 4, 5};
+        int[] a = {1, 2, 3, 4, 5};
         int x = 4;
         System.out.println(sqrt(x));
-        // int target = 0;
-        // System.out.println(binarysearch(a, target));
-            // System.out.println(recbinarysearch(a, 0 , a.length - 1, target));
+        int target = 0;
+        System.out.println(binarysearch(a, target));
+        System.out.println(recbinarysearch(a, 0 , a.length - 1, target));
     }
     
 }
